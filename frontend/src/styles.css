@@ -1,0 +1,539 @@
+/* =========================
+   🌍 GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4fff7;
+  color: #1b5e20;
+}
+
+/* =========================
+   🌱 COMMON UTILITIES
+========================= */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* =========================
+   🌿 HEADER / NAVBAR
+========================= */
+/* HEADER – SIMPLE BAR THAT CAN WRAP YOUR NAV */
+header,
+.app-header {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-sky));
+  color: #f1f8e9;
+  box-shadow: 0 4px 14px rgba(56, 142, 60, 0.35);
+}
+
+.app-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.app-logo {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-size: 20px;
+}
+
+.app-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.app-nav button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(227, 242, 253, 0.15);
+  color: #e8f5e9;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.app-nav button:hover {
+  background: rgba(227, 242, 253, 0.35);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   🌱 FORMS (GLOBAL)
+========================= */
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 128, 0, 0.15);
+  max-width: 500px;
+  margin: auto;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #c8e6c9;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* =========================
+   🌿 BUTTONS
+========================= */
+button {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 128, 0, 0.35);
+}
+
+button:disabled {
+  background: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* =========================
+   📦 BOOKING / ESTIMATOR
+========================= */
+.booking-container,
+.estimator-container {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.date-time-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* =========================
+   ♻ REPAIR PASSPORT
+========================= */
+.repair-passport-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f6fff8;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 128, 0, 0.15);
+}
+
+.repair-passport-container h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.history-section h3 {
+  color: #2e7d32;
+  border-left: 6px solid #4caf50;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.history-card {
+  background: white;
+  border-left: 8px solid #4caf50;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 128, 0, 0.25);
+}
+
+.history-card p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.history-card b {
+  color: #1b5e20;
+}
+
+/* =========================
+   ✅ SUCCESS POPUP
+========================= */
+.success-popup {
+  background: #e8f5e9;
+  color: #1b5e20;
+  padding: 14px;
+  border-radius: 12px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #a5d6a7;
+}
+
+/* =========================
+   🤖 CHATBOT
+========================= */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 128, 0, 0.4);
+}
+
+/* =========================
+   📱 RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .date-time-row {
+    flex-direction: column;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  .repair-passport-container {
+    padding: 20px;
+  }
+}
+
+/* HISTORY CARD TEXT STYLING */
+
+.history-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 26px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 22px rgba(0, 128, 0, 0.15);
+  border-left: 6px solid #4caf50;
+}
+
+/* Row layout */
+.history-card .row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* Labels */
+.history-card .label {
+  min-width: 70px;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+/* Base value */
+.history-card .value {
+  font-weight: 500;
+}
+
+/* Color coding */
+.history-card .value.device {
+  color: #0b3d1b;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.history-card .value.type {
+  color: #2e7d32;
+}
+
+.history-card .value.event {
+  color: #388e3c;
+}
+
+.history-card .value.cost {
+  color: #1b5e20;
+  font-weight: 700;
+}
+
+.history-card .value.date {
+  color: #6b8e6b;
+  font-size: 14px;
+}
+
+.history-card .value.notes {
+  color: #33691e;
+  font-style: italic;
+}
+
+/* HOME – NATURE DASHBOARD */
+
+/* HOME TILE LAYOUT */
+
+.home-wrap {
+  margin-top: 24px;
+}
+
+.home-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.home-title {
+  margin: 0;
+  font-size: 26px;
+  color: #1b5e20;
+}
+
+.home-subtitle {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #546e7a;
+}
+
+/* grid of tiles */
+.home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.35fr);
+  grid-auto-rows: 150px;
+  gap: 14px;
+}
+
+/* base tile */
+.home-tile {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(161, 136, 127, 0.35);
+  box-shadow: 0 10px 24px rgba(121, 85, 72, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.home-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(121, 85, 72, 0.28);
+}
+
+/* main big tile */
+.home-tile-main {
+  grid-row: span 2;
+  background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+}
+
+.home-tile-main h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #1b5e20;
+}
+
+.home-tile-main p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #455a64;
+}
+
+/* pickup tile – sky blue */
+.home-tile-pickup {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+.home-tile-pickup h3,
+.home-tile-passport h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #0b3954;
+}
+
+.home-tile-pickup p,
+.home-tile-passport p {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #455a64;
+}
+
+/* passport tile – soft green */
+.home-tile-passport {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+/* tiny info tiles */
+.home-tile-mini {
+  background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+}
+
+.home-tile-mini h4 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: #6d4c41;
+}
+
+.home-tile-mini p {
+  margin: 0;
+  font-size: 13px;
+  color: #5d4037;
+}
+
+/* make grid stack on small screens */
+@media (max-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .home-tile-main {
+    grid-row: auto;
+  }
+}
+
+/* split main tile into text + gadget art */
+.home-tile-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.home-main-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* right side gadget area */
+.home-main-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: flex-start;
+  justify-content: flex-end;
+  padding-left: 10px;
+}
+
+/* cute pill chips for gadgets */
+.gadget-chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(144, 202, 249, 0.7);
+  font-size: 12px;
+  font-weight: 600;
+  color: #0b3954;
+  box-shadow: 0 4px 10px rgba(144, 202, 249, 0.4);
+}
+
+/* if later you use real images */
+.gadget-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #ffffff;
+  object-fit: contain;
+  box-shadow: 0 6px 14px rgba(121, 85, 72, 0.25);
+}
+
+/* stack on small screens */
+@media (max-width: 768px) {
+  .home-tile-main {
+    grid-template-columns: 1fr;
+  }
+
+  .home-main-right {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+}
+.repair-centers {
+  padding: 20px;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.category-buttons button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #0ea44b;
+  color: white;
+}
+
+.centers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.center-card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  margin-bottom: 10px;
+}

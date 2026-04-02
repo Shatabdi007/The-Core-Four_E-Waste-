@@ -1,0 +1,62 @@
+.repair-centers {
+  padding: 30px;
+}
+
+.centers-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.center-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.center-card button {
+  background: #22c55e;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.repair-centers {
+  padding: 20px;
+}
+
+.category-buttons button {
+  margin-right: 10px;
+  padding: 8px 14px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.centers-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.center-card {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: green;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}

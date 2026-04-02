@@ -1,0 +1,270 @@
+/* ROOT LAYOUT – NATURE CARD */
+
+.address-picker {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 1.8rem 1.8rem 2.2rem;
+  border-radius: 1.4rem;
+  background: radial-gradient(circle at top, #e0f7fa 0, #ffffff 40%, #e8f5e9 100%);
+  border: 1px solid rgba(56, 142, 60, 0.25);
+  box-shadow: 0 18px 40px rgba(38, 50, 56, 0.25);
+  color: #1b4332;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* LOCATION OPTIONS – SKY BLUE PILLS */
+
+.location-options {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.option-btn {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(100, 181, 246, 0.8);
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #0b3954;
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.option-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(33, 150, 243, 0.25);
+  border-color: #42a5f5;
+}
+
+.option-btn.active {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: #fdfdfd;
+  border-color: #2e7d32;
+}
+
+.option-btn.loading {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* SAVED ADDRESSES – SOFT CARDS */
+
+.saved-addresses {
+  margin-bottom: 24px;
+}
+
+.saved-addresses label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #33691e;
+  margin-bottom: 10px;
+}
+
+.saved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.saved-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(161, 136, 127, 0.35); /* brownish border */
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.1s ease,
+    background 0.2s ease;
+}
+
+.saved-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(121, 85, 72, 0.25);
+}
+
+.saved-card.selected {
+  border-color: #4caf50;
+  background: #e8f5e9;
+}
+
+.saved-icon {
+  font-size: 22px;
+}
+
+.saved-info {
+  flex: 1;
+}
+
+.saved-info h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1b4332;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+}
+
+.saved-info p {
+  font-size: 11px;
+  color: #607d8b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.check {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* SEARCH BAR – WHITE + BLUE */
+
+.search-bar {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #607d8b;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 11px 16px 11px 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(144, 202, 249, 0.8);
+  font-size: 13px;
+  outline: none;
+  background: #ffffff;
+  color: #0b3954;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.search-bar input::placeholder {
+  color: #90a4ae;
+}
+
+.search-bar input:focus {
+  border-color: #42a5f5;
+  box-shadow: 0 0 0 2px rgba(66, 165, 245, 0.3);
+}
+
+/* ADDRESS FORM – GREEN EDGES */
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.form-group input,
+.form-group select {
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(161, 136, 127, 0.4); /* subtle brown */
+  font-size: 13px;
+  outline: none;
+  background: #ffffff;
+  color: #37474f;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #b0bec5;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #43a047;
+  box-shadow: 0 0 0 2px rgba(67, 160, 71, 0.25);
+  background: #f1f8e9;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MAP PREVIEW – EARTH TONES */
+
+.map-preview {
+  background: linear-gradient(135deg, #b3e5fc, #ffecb3);
+  border-radius: 16px;
+  height: 160px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 204, 128, 0.7);
+}
+
+.map-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #5d4037;
+}
+
+.map-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+/* CONFIRM BUTTON – LEAF GREEN */
+
+.btn-confirm {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+  color: #fdfdfd;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 26px rgba(56, 142, 60, 0.35);
+}
+
+.btn-confirm:hover:not(:disabled) {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: 0 14px 32px rgba(56, 142, 60, 0.5);
+}
+
+.btn-confirm:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
