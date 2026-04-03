@@ -50,30 +50,139 @@ export const commonIssues = {
     {
       id: "screen-crack",
       name: "Screen Cracked/Broken",
-      description: "Display damage requiring replacement",
       costMultiplier: 1.8,
       severity: "high"
     },
     {
       id: "battery",
       name: "Battery Issue",
-      description: "Battery draining fast or not charging",
       costMultiplier: 0.6,
       severity: "medium"
     }
   ],
+
   laptops: [
     {
       id: "screen",
       name: "Screen Replacement",
-      description: "Broken or flickering display",
       costMultiplier: 1.5,
       severity: "high"
+    },
+    {
+      id: "keyboard",
+      name: "Keyboard Issue",
+      costMultiplier: 0.7,
+      severity: "medium"
+    },
+    {
+      id: "battery",
+      name: "Battery Replacement",
+      costMultiplier: 0.9,
+      severity: "medium"
     }
-  ]
+  ],
+
+  // ✅ DEVICE-WISE APPLIANCE ISSUES (MAIN FEATURE)
+  appliances: {
+    ac: [
+      {
+        id: "not-cooling",
+        name: "Not Cooling",
+        costMultiplier: 1.2,
+        severity: "high"
+      },
+      {
+        id: "gas",
+        name: "Gas Leakage",
+        costMultiplier: 1.3,
+        severity: "high"
+      }
+    ],
+
+    refrigerator: [
+      {
+        id: "not-cooling",
+        name: "Not Cooling",
+        costMultiplier: 1.2,
+        severity: "high"
+      },
+      {
+        id: "ice",
+        name: "Ice Build-up",
+        costMultiplier: 0.8,
+        severity: "medium"
+      }
+    ],
+
+    "washing-machine": [
+      {
+        id: "not-spinning",
+        name: "Not Spinning",
+        costMultiplier: 1.1,
+        severity: "high"
+      },
+      {
+        id: "water",
+        name: "Water Not Draining",
+        costMultiplier: 0.9,
+        severity: "medium"
+      }
+    ],
+
+    microwave: [
+      {
+        id: "not-heating",
+        name: "Not Heating",
+        costMultiplier: 1.2,
+        severity: "high"
+      },
+      {
+        id: "sparking",
+        name: "Sparking Inside",
+        costMultiplier: 1.3,
+        severity: "high"
+      }
+    ],
+
+    tv: [
+      {
+        id: "no-display",
+        name: "No Display",
+        costMultiplier: 1.4,
+        severity: "high"
+      },
+      {
+        id: "lines",
+        name: "Lines on Screen",
+        costMultiplier: 1.2,
+        severity: "medium"
+      },
+      {
+        id: "sound",
+        name: "No Sound",
+        costMultiplier: 0.8,
+        severity: "medium"
+      }
+    ],
+
+    "water-purifier": [
+      {
+        id: "no-water",
+        name: "No Water Output",
+        costMultiplier: 1.0,
+        severity: "high"
+      },
+      {
+        id: "filter",
+        name: "Filter Replacement",
+        costMultiplier: 0.6,
+        severity: "low"
+      }
+    ]
+  }
 };
 
-// ---------------- SIMPLE EXPORTS (as you asked) ----------------
+// ---------------- SIMPLE EXPORTS ----------------
 export const simpleDeviceCategories = [
   {
     id: "smartphones",
@@ -86,7 +195,7 @@ export const simpleDeviceCategories = [
 
 export const simpleCommonIssues = {};
 
-// ✅ MISSING EXPORT FIX
+// ---------------- STATES ----------------
 export const indianStates = [
   "Andhra Pradesh",
   "Arunachal Pradesh",
@@ -103,5 +212,4 @@ export const indianStates = [
   "Madhya Pradesh",
   "Maharashtra",
   "Uttar Pradesh"
-  
 ];
