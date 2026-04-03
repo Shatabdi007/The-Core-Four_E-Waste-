@@ -14,10 +14,18 @@ const RepairEstimator = () => {
   const [isCalculating, setIsCalculating] = useState(false);
 
   /* ---------- AVAILABLE ISSUES ---------- */
-  const availableIssues = useMemo(() => {
-    if (!selectedCategory) return [];
-    return commonIssues[selectedCategory.id] || [];
-  }, [selectedCategory]);
+  /* ---------- AVAILABLE ISSUES ---------- */
+const availableIssues = useMemo(() => {
+  if (!selectedCategory) return [];
+
+  // ✅ FIX FOR APPLIANCES
+  if (selectedCategory.id === "appliances") {
+    return commonIssues.appliances?.[selectedDevice?.id] || [];
+  }
+
+  // ✅ NORMAL (phones/laptops)
+  return commonIssues[selectedCategory.id] || [];
+}, [selectedCategory, selectedDevice]);
 
   /* ---------- COST ESTIMATION ---------- */
   const estimate = useMemo(() => {
@@ -179,7 +187,8 @@ const RepairEstimator = () => {
           <>
             <h3>Select Issues</h3>
             <div className="issues-list">
-              {availableIssues.map((issue) => (
+              {Array.isArray(availableIssues) &&
+  availableIssues.map((issue) => (
                 <div
                   key={issue.id}
                   className={`issue-card ${
@@ -240,3 +249,4 @@ const RepairEstimator = () => {
 };
 
 export default RepairEstimator;
+
