@@ -1,12 +1,13 @@
 // =======================
 // REQUIRED IMPORTS (ESM)
 // =======================
+import "dotenv/config";
+
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
 
 // =======================
 // ROUTE IMPORTS
@@ -23,7 +24,7 @@ import passportRoutes from "./routes/passport.js";
 import repairCentersRoute from "./routes/repairCenters.js";
 
 // =======================
-dotenv.config();
+
 const app = express();
 
 // =======================
@@ -112,18 +113,12 @@ app.post("/sudhaar-bot/ask", (req, res) => {
 // EMAIL TRANSPORTER
 // =======================
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
+  service: "gmail",
   auth: {
     user: process.env.MAIL_USER,
     pass: process.env.MAIL_PASS,
   },
 });
-
-transporter.verify()
-  .then(() => console.log("✅ Email transporter ready"))
-  .catch(err => console.error("❌ Email transporter error:", err));
 
 // =======================
 // PICKUP BOOKING EMAIL (BEAUTIFUL VERSION)
